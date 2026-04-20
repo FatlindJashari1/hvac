@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menaxhimi HVAC</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Menaxhimi i Projekteve HVAC</h1>
+    <p class="subtitle">Regjistro projektin dhe vazhdo direkt te hapesira e vizatimit.</p>
+
+    <form id="projectForm" class="card">
+      <h2>Krijo Projekt</h2>
+      <label>Emri i pronarit / projektit</label>
+      <input type="text" id="name" placeholder="p.sh. Shtepia Jashari" required />
+
+      <label>Siperfaqja (m²)</label>
+      <input type="number" id="area" min="1" placeholder="p.sh. 120" required />
+
+      <label>Numri i dhomave</label>
+      <input type="number" id="rooms" min="1" placeholder="p.sh. 6" required />
+
+      <button type="submit">Ruaj dhe Hape Vizatimin</button>
+    </form>
+
+    <section class="card">
+      <h2>Lista e Projekteve</h2>
+      <button id="refreshBtn" class="secondary">Rifresko</button>
+      <div id="projectList"></div>
+    </section>
+
+    <section class="card">
+      <h2>Detajet e Projektit</h2>
+      <div id="projectDetails">Zgjidh nje projekt nga lista.</div>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

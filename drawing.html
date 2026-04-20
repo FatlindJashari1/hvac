@@ -1,0 +1,67 @@
+﻿<!DOCTYPE html>
+<html lang="sq">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vizatimi i Projektit</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container drawing-page">
+    <div class="topbar">
+      <h1 id="drawingTitle">Hapesira e Vizatimit</h1>
+      <div class="topbar-actions">
+        <button class="secondary" id="backBtn">Kthehu te Lista</button>
+        <button id="saveDrawingBtn">Ruaj Vizatimin</button>
+      </div>
+    </div>
+
+    <section class="card">
+      <div id="projectMeta" class="small">Duke ngarkuar projektin...</div>
+    </section>
+
+    <section class="card">
+      <div class="toolbar">
+        <button class="tool-btn active" data-tool="pen">Laps</button>
+        <button class="tool-btn" data-tool="line">Vije e Drejte</button>
+        <button class="tool-btn" data-tool="fixedLine">Vije fikse (m)</button>
+        <button class="tool-btn" data-tool="wall">Mur</button>
+        <button class="tool-btn" data-tool="room">Dhoma</button>
+        <button class="tool-btn" data-tool="text">Tekst</button>
+        <button class="tool-btn" data-tool="arrow">Shigjete</button>
+        <button class="tool-btn" data-tool="supply">Tub Furnizim</button>
+        <button class="tool-btn" data-tool="return">Tub Kthim</button>
+        <button class="tool-btn" data-tool="radiator">Radiator</button>
+        <button class="tool-btn" data-tool="boiler">Boiler</button>
+        <button class="tool-btn" data-tool="dush">Dush</button>
+        <button class="tool-btn" data-tool="wc">WC</button>
+        <button class="tool-btn" data-tool="lavabo">Lavabo</button>
+        <button class="tool-btn" data-tool="klima">Klimatizim</button>
+        <button class="tool-btn" data-tool="erase">Fshij</button>
+
+        <label class="tool-control">Ngjyra <input type="color" id="colorPicker" value="#111111" /></label>
+        <label class="tool-control">Trashesi <input type="range" id="sizePicker" min="1" max="12" value="2" /></label>
+        <label class="tool-control">Shkalla px/m <input type="number" id="scalePx" min="5" max="100" value="20" /></label>
+        <label class="tool-control">Gjatësia m <input type="number" id="meterLength" min="1" max="100" value="10" /></label>
+        <label class="tool-control">Drejtimi
+          <select id="directionSelect">
+            <option value="right">Djathtas</option>
+            <option value="left">Majtas</option>
+            <option value="up">Lart</option>
+            <option value="down">Poshte</option>
+          </select>
+        </label>
+        <label class="tool-control">Teksti <input type="text" id="textInput" placeholder="p.sh. Sallon, 25m2" /></label>
+        <button id="undoBtn" class="secondary">Undo</button>
+        <button id="clearBtn" class="danger">Pastro</button>
+      </div>
+
+      <div class="canvas-wrap">
+        <canvas id="drawingCanvas" width="1300" height="760"></canvas>
+      </div>
+    </section>
+  </div>
+
+  <script src="drawing.js"></script>
+</body>
+</html>
